@@ -1,0 +1,34 @@
+<html>
+<head> 
+<title>Program 2 - 0-10 Square and Cubes</title>
+<script> 
+document.write( "<center><table> <tr> <th>Number</th> <th>Square</th> <th>Cube</th> </tr>" ) 
+for(var n=0; n<=10; n++) 
+{ 
+document.write( "<tr><td>" + n + "</td><td>" + n*n + "</td><td>" + n*n*n + "</td></tr>" ) 
+} 
+document.write( "</table></center>" ) 
+</script> 
+<style>
+table {  
+    color: #333; /* Lighten up font color */
+    font-family: Helvetica, Arial, sans-serif; /* Nicer font */
+    width: 640px; 
+    border-collapse: 
+    collapse; border-spacing: 0; 
+}
+
+td, th { border: 1px solid #CCC; height: 30px; } /* Make cells a bit taller */
+
+th {  
+    background: #2676af; /* Light grey background */
+    font-weight: bold; /* Make sure they're bold */
+}
+
+td {  
+    background: #FAFAFA; /* Lighter grey background */
+    text-align: center; /* Center our text */
+}
+</style>
+</head> 
+</html>
