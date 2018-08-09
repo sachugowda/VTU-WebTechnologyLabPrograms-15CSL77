@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>JavaScript Functions</title>
+ <style>
+ input[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 25%;
+    background-color: #af4c55;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+div{
+    background-color: #d8bfbf;
+    width: 50%;
+    padding: 10px;
+    border: 2px solid #ab9a9a;
+}
+ </style>
+ </head>
+ <body style="background-color:#e0dcd5">
+ <main style="max-width: 900px; margin: auto;">
+ <center>
+ 
+<input type="text" id="str" placeholder="Enter Sting/Number">
+<input type="submit" onclick="evalinput();" value="Submit" name="sub">
+
+</p>
+ <br/>
+ <h2 style="color:#af4c55">Result:</h2>
+ <div id="result"></div>
+ <script>
+ function evalinput() {
+ var str = document.getElementById("str").value;
+ if (Number.isInteger(parseInt(str))) {
+ var num = parseInt(str);
+ var rev = 0, rem = 0;
+ while (num > 0) {
+ rem = parseInt(num % 10);
+ rev = rev * 10 + rem;
+ num = parseInt(num / 10);
+ }
+ document.getElementById("result").innerHTML = "<p>Reverse of: <strong> " + str + " is " + rev +
+"<strong></p>";
+ }
+ else {
+ var text = "<p>The Entered string is: <strong>" + str + "</strong><p>";
+ for (var i = 0; i < str.length; i++)
+ {
+ if (str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i'
+ || str.charAt(i) == 'o' || str.charAt(i) == 'u' || str.charAt(i) == 'A' ||
+ str.charAt(i) == 'E' || str.charAt(i) == 'I' || str.charAt(i) == 'O' || str.charAt(i) == 'U')
+ {
+ text += "<p>The Leftmost Vowel is: <strong>" + str.charAt(i) + "</strong><p/>";
+ var pos = i + 1;
+
+ text += "<p>The Position of the Leftmost Vowel: <strong> " + str.charAt(i) + " is " + pos + "<strong><p/>";
+ document.getElementById("result").innerHTML = text;
+ exit;
+ }
+ }
+ text += "<p> The Entered String Has No Vowels</p>";
+ document.getElementById("result").innerHTML = text;
+ }
+ }
+ </script>
+ </center>
+ </main>
+ </body>
+</html>
