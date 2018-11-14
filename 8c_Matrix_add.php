@@ -9,7 +9,7 @@ $sumArray = array();
 $result = array();
 for($i=0; $i<=1; $i++) {
     for($j=0; $j<=1; $j++) {
-        $result[$i][$j] = $a1[$i][$j] * $a2[$i][$j];
+        $result[$i][$j] = $a1[$i][$j] + $a2[$i][$j];
     }
 }
 echo "<p> matrix one </p>";
